@@ -190,7 +190,6 @@ int parse_eliza_script(struct eliza_state *eliza, const char *path)
   free(decomp);
   free(key);
   fclose(file);
-
   return 0;
 }
 

@@ -42,7 +42,6 @@ void eliza_destroy(struct eliza_state *e)
 {
   free(e->begin);
   free(e->end);
-
   map_destroy(&e->quit_words);
 
   list_apply_elems(&e->rules, &destroy_void_ptr_rule);

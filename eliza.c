@@ -193,6 +193,5 @@ int main(void)
 
   interactive_loop(&eliza);
   eliza_destroy(&eliza);
-
   return EXIT_SUCCESS;
 }

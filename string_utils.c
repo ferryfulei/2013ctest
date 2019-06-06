@@ -24,8 +24,9 @@ char *empty_string(void)
 /* Given a string, return a heap-allocated copy */
 
 char *clone(const char *str)
-{
+{    
     char *res = (char*)malloc(sizeof(char) * (strlen(str) + 1));
+    strcpy(res, str);
     if (res == NULL) {
         perror("clone");
         exit(EXIT_FAILURE);
@@ -42,6 +43,7 @@ char *clone(const char *str)
 
 char *push_string(char *current, const char *append)
 {
+    
     current = (char*)realloc(current, sizeof(char) * (strlen(current) + strlen(append) + 1));
     if (current == NULL) {
         perror("push_string");
@@ -140,3 +142,4 @@ char *rewrite_string(struct map *substitutions, const char* const_input)
   free(tokens);
   return result;
 }
+
